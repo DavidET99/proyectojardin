@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Producto</title>
+</head>
+<body>
+    <h1>Eliminar Producto</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p>¿Estás seguro de que deseas eliminar el siguiente producto?</p>
+        <p><strong>Nombre:</strong> {{ producto.nombre }}</p>
+        <p><strong>Descripción:</strong> {{ producto.descripcion }}</p>
+        <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+        <button type="submit">Eliminar</button>
+    </form>
+</body>
+</html>
